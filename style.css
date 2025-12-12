@@ -209,6 +209,55 @@ button { font-family: inherit; }
 }
 .banner i { font-size: 18px; }
 
+.assistant-suggestions {
+    display: grid;
+    gap: 12px;
+}
+.assistant-suggestion {
+    position: relative;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 14px 30px rgba(10, 138, 96, 0.08);
+    overflow: hidden;
+}
+.assistant-suggestion::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 50%, rgba(10, 138, 96, 0.08), transparent 52%);
+    pointer-events: none;
+}
+.assistant-cta {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 14px 10px;
+    border-radius: 14px;
+    background: var(--green);
+    color: #fff;
+    font-weight: 800;
+    border: none;
+    box-shadow: 0 12px 24px rgba(10, 138, 96, 0.16);
+}
+.assistant-cta span { display: block; }
+.assistant-body {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-content: center;
+    gap: 4px;
+}
+.assistant-body strong { font-size: 15px; color: var(--text); }
+.assistant-body .muted { line-height: 1.7; }
+
 .horizontal-cards {
     display: grid;
     gap: 10px;

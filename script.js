@@ -7,7 +7,7 @@ const mockData = {
     mobile: "05XXXXXXX9",
   },
   reminders: [
-    { title: "موعد فحص المركبة الاثنين 9 صباحاً", tag: "مركبة", note: "وصل قبل الموعد بربع ساعة لتأكيد الحجز.", link: "checkout.html?service=vehicle-inspection" },
+    { title: "موعد فحص المركبة الاثنين 9 صباحاً", tag: "مركبة", note: "الوصول قبل الموعد بربع ساعة لتأكيد الحجز.", link: "checkout.html?service=vehicle-inspection" },
     { title: "انتهاء جواز السفر خلال 30 يوماً", tag: "الجوازات", note: "ابدأ التجديد لتجنب أي تأخير في السفر.", link: "checkout.html?service=passport-renew" },
     { title: "اعتراض على المخالفة المسجلة", tag: "المرور", note: "أرفق أدلتك لبدء الاعتراض فوراً.", link: "checkout.html?service=complaint" },
   ],
@@ -122,7 +122,7 @@ const servicesData = [
 const chatScenarios = [
   {
     question: "هل أقدر أجيب أختي للسعودية؟",
-    answer: "يمكنك تقديم طلب زيارة عائلية للأخت. تأكد من صلاحية الجواز ورقم الحدود، وسيتم إرسال رسالة حال إصدار التأشيرة.",
+    answer: "يمكنك تقديم طلب زيارة عائلية للأخت. تأكد من صلاحية الجواز   وسيتم إرسال رسالة حال إصدار التأشيرة.",
     action: { label: "بدء طلب زيارة عائلية", link: "checkout.html?service=family-visit" },
   },
   {
@@ -236,15 +236,19 @@ function renderHome() {
 
   const suggestions = $("#smart-suggestions");
   if (suggestions) {
+    suggestions.classList.add("assistant-suggestions");
     suggestions.innerHTML = mockData.suggestions
       .map(
         (s) => `
-        <div class="list-item">
-          <div>
+        <div class="assistant-suggestion">
+          <a class="assistant-cta" href="${s.link}">
+            <span>O"O_O?</span>
+            <span>OU,OrO_U.Oc</span>
+          </a>
+          <div class="assistant-body">
             <strong>${s.title}</strong>
-            <span class="muted">${s.detail}</span>
+            <div class="muted">${s.detail}</div>
           </div>
-          <a class="btn btn-primary" href="${s.link}">بدء الخدمة</a>
         </div>
       `
       )
