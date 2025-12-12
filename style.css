@@ -216,7 +216,7 @@ button { font-family: inherit; }
 .assistant-suggestion {
     position: relative;
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 1fr 130px;
     align-items: stretch;
     gap: 12px;
     padding: 14px;
@@ -234,6 +234,7 @@ button { font-family: inherit; }
     pointer-events: none;
 }
 .assistant-cta {
+    grid-column: 2;
     position: relative;
     z-index: 1;
     display: grid;
@@ -249,11 +250,13 @@ button { font-family: inherit; }
 }
 .assistant-cta span { display: block; }
 .assistant-body {
+    grid-column: 1;
     position: relative;
     z-index: 1;
     display: grid;
     align-content: center;
     gap: 4px;
+    text-align: right;
 }
 .assistant-body strong { font-size: 15px; color: var(--text); }
 .assistant-body .muted { line-height: 1.7; }

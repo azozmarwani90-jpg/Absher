@@ -242,8 +242,8 @@ function renderHome() {
         (s) => `
         <div class="assistant-suggestion">
           <a class="assistant-cta" href="${s.link}">
-            <span>O"O_O?</span>
-            <span>OU,OrO_U.Oc</span>
+            <span>بدء</span>
+            <span>الخدمة</span>
           </a>
           <div class="assistant-body">
             <strong>${s.title}</strong>
