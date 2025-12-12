@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أبشر | إتمام الدفع</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="icon-btn" aria-label="المساعد"><i class="fa fa-robot"></i></div>
+      <div class="title-group">
+        <small>إتمام الدفع</small>
+        <h1>أبشر</h1>
+      </div>
+      <a class="icon-btn" href="services.html" aria-label="الخدمات"><i class="fa fa-th-large"></i></a>
+    </header>
+
+    <main class="page">
+      <section class="section">
+        <div class="checkout-hero">
+          <div class="muted">الخدمة المختارة</div>
+          <h2 id="checkout-title">تجديد الجواز</h2>
+        </div>
+      </section>
+
+      <section class="section checkout-layout">
+        <div class="card flat">
+          <h3 class="card-title">خطوات الطلب</h3>
+          <div id="checkout-summary" class="list"></div>
+        </div>
+        <div class="card flat">
+          <h3 class="card-title">الرسوم والتوصيل</h3>
+          <div id="fees-list"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card flat">
+          <h3 class="card-title">عنوان التوصيل ووسيلة الدفع</h3>
+          <div class="list">
+            <div class="card-row">
+              <div>
+                <strong>عنوان التوصيل</strong>
+                <div class="muted">الرياض - الياسمين - شارع العليا</div>
+              </div>
+              <button class="btn btn-text" type="button"><i class="fa fa-location-dot"></i> تعديل</button>
+            </div>
+            <div class="card-row">
+              <div>
+                <strong>وسيلة الدفع</strong>
+                <div class="muted">بطاقة مدى من البنك الأهلي</div>
+              </div>
+              <button class="btn btn-text" type="button"><i class="fa fa-credit-card"></i> تغيير</button>
+            </div>
+          </div>
+          <button class="btn btn-primary full" id="confirm-checkout" type="button"><i class="fa fa-lock"></i> تأكيد ودفع</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="index.html"><i class="nav-icon fa fa-house"></i><span>الرئيسية</span></a>
+      <a class="nav-item" data-nav="services" href="services.html"><i class="nav-icon fa fa-th-large"></i><span>الخدمات</span></a>
+      <a class="nav-item" data-nav="chat" href="chat.html"><i class="nav-icon fa fa-comments"></i><span>المحادثة</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><i class="nav-icon fa fa-user"></i><span>الملف</span></a>
+    </nav>
+
+    <div id="toast"></div>
+
+    <div class="modal" id="service-modal">
+      <div class="modal-card">
+        <div class="card-row">
+          <h3 id="modal-title">تفاصيل الخدمة</h3>
+          <button class="icon-btn light" data-close-modal aria-label="إغلاق"><i class="fa fa-xmark"></i></button>
+        </div>
+        <p id="modal-desc" class="muted"></p>
+        <h4>الخطوات</h4>
+        <ol id="modal-steps" class="steps"></ol>
+        <button class="btn btn-primary full" id="modal-cta" type="button">بدء الخدمة</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

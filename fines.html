@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أبشر | المخالفات</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="fines">
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="icon-btn" aria-label="المساعد"><i class="fa fa-robot"></i></div>
+      <div class="title-group">
+        <small>المخالفات</small>
+        <h1>أبشر</h1>
+      </div>
+      <a class="icon-btn" href="chat.html" aria-label="المحادثة"><i class="fa fa-comments"></i></a>
+    </header>
+
+    <main class="page">
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">المخالفات المسجلة</h2>
+          <span class="section-sub">سداد فوري أو تظلم</span>
+        </div>
+        <div class="list" id="fines-list"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="index.html"><i class="nav-icon fa fa-house"></i><span>الرئيسية</span></a>
+      <a class="nav-item" data-nav="services" href="services.html"><i class="nav-icon fa fa-th-large"></i><span>الخدمات</span></a>
+      <a class="nav-item" data-nav="chat" href="chat.html"><i class="nav-icon fa fa-comments"></i><span>المحادثة</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><i class="nav-icon fa fa-user"></i><span>الملف</span></a>
+    </nav>
+
+    <div id="toast"></div>
+
+    <div class="modal" id="service-modal">
+      <div class="modal-card">
+        <div class="card-row">
+          <h3 id="modal-title">تفاصيل الخدمة</h3>
+          <button class="icon-btn light" data-close-modal aria-label="إغلاق"><i class="fa fa-xmark"></i></button>
+        </div>
+        <p id="modal-desc" class="muted"></p>
+        <h4>الخطوات</h4>
+        <ol id="modal-steps" class="steps"></ol>
+        <button class="btn btn-primary full" id="modal-cta" type="button">بدء الخدمة</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
